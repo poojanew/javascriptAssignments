@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q12</title>
+	<script type="text/javascript">
+		function pallindrome(){
+			var str = document.getElementById("txt1").value;
+			var revstrarr;
+			var flag=0;
+			var splitstr= str.split("");
+			revstrarr=splitstr.reverse();
+			var revstr=revstrarr.join("");
+
+			for (var i = 0; i <= str.length-1; i++) {
+				if(str.charAt(i)!=revstr.charAt(i)){
+					flag=1;
+					break;
+				}
+			}
+
+			if(flag==0)
+			{
+				document.getElementById("result").innerHTML="String is pallindrome";
+			}
+			else
+			{
+				document.getElementById("result").innerHTML="String is not pallindrome";
+
+			}
+
+			
+		
+		}
+	</script>
+</head>
+<body>
+
+<input type="input" id="txt1">
+<button onclick="pallindrome()">check</button>
+<p id="result"></p>
+
+</body>
+</html>

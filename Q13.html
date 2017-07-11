@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q13</title>
+	<script type="text/javascript">
+		function charCount(){
+			var sentence = document.getElementById("sentence").value;
+			var charCount=0;
+			for (var i = 0; i <= sentence.length-1; i++) {
+				if(sentence.charAt(i)!=" "){
+					charCount++;
+				}
+			}
+
+			document.getElementById("result").innerHTML=charCount;
+
+		}
+	</script>
+</head>
+<body>
+
+<input type="input" id="sentence">
+<button onclick="charCount()">Number of Characters</button>
+<p id="result"></p>
+
+
+</body>
+</html>

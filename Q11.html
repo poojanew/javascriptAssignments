@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q11</title>
+	<script type="text/javascript">
+		function vowelCount(){
+			var vow=[];
+			vow["a"]=0;
+			vow["e"]=0;
+			vow["i"]=0;
+			vow["o"]=0;
+			vow["u"]=0;
+			var ch;
+			var str=document.getElementById("txt").value;
+			for (var i = 0; i <= str.length-1; i++) {
+				ch = str.charAt(i);
+				if(ch=="a" || ch=="A")
+				{
+					vow["a"]=vow["a"]+1;
+				}
+				if(ch=="e" || ch=="E")
+				{
+					vow["e"]=vow["e"]+1;
+				}
+				if(ch=="i" || ch=="I")
+				{
+					vow["i"]=vow["i"]+1;
+				}
+				if(ch=="o" || ch=="O")
+				{
+					vow["o"]=vow["o"]+1;
+				}
+				if(ch=="u" || ch=="U")
+				{
+					vow["u"]=vow["u"]+1;
+				}
+			}
+
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\nVowel Count---->";
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\n a---->"+vow["a"];
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\n e---->"+vow["e"];
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\n i---->"+vow["i"];
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\n o---->"+vow["o"];
+				document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"\n u---->"+vow["u"];
+		}
+	</script>
+</head>
+<body>
+
+<input type="input" id="txt">
+<button onclick="vowelCount()">vowelCount</button>
+<p id="result"></p>
+
+</body>
+</html>

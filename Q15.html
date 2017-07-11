@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q13</title>
+	<script type="text/javascript">
+		function removeWhiteSpace(){
+			var sentence = document.getElementById("sentence").value;
+			for (var i = 0; i <= sentence.length-1; i++) {
+
+				if(sentence.charAt(i)==" "&& sentence.charAt(i+1)==" "){
+					sentence.replace(sentence.charAt(i),"");
+				}
+			
+			}
+
+			document.getElementById("result").innerHTML=sentence;
+
+		}
+	</script>
+</head>
+<body>
+
+<input type="input" id="sentence">
+<button onclick="removeWhiteSpace()">Number of Characters</button>
+<p id="result"></p>
+
+
+</body>
+</html>

@@ -22,14 +22,13 @@
 			for(var j=lownum;j<=highnum;j++)
 			{
 				flag=0;
-				for(var i=2;i< j/2;i++){
+				for(var i=2;i<=j/2;i++){
 				if(j%i==0){
 					flag=1;
 					break;
 				}
 				}
-
-				if(flag==0){
+				if(flag==0 && j!=1){
 					document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+" "+j;
 				}
 			}

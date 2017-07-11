@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q14</title>
+	<script type="text/javascript">
+		function validateEmail(){
+			var email=document.getElementById("email").value;
+			var patt=new RegExp("@gmail.com");
+			var respatt=patt.test(email);
+			var nonW=new RegExp("\w");
+			var nonWtest= nonW.test(email);
+
+
+			if(respatt==true && nonWtest==true){
+				window.alert("Valid Email");
+			}
+			else{
+				window.alert("Non Valid Email");
+
+			}
+			
+
+		}
+	</script>
+</head>
+<body>
+<input type="input" id="email">
+<button onclick="validateEmail()">submit</button>
+<p id="result"></p>
+
+</body>
+</html>

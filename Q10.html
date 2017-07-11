@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment Q9</title>
+	<script type="text/javascript">
+
+				var numberArr=[];
+
+		function arrayOperation(){
+
+				numberArr.push(document.getElementById("arrayElements").value);
+				document.getElementById("result").innerHTML="";
+
+				
+		}
+
+		function display(numberArray)
+		{
+			for (var i = 0; i <=numberArr.length-1; i++) {
+					document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+" "+numberArr[i];			
+			}
+		}
+
+		function asc(){
+
+			numberArr.sort(function(a, b){return a-b});
+			display(numberArr);
+		}
+
+		function desc(){
+			numberArr.sort(function(a, b){return b-a});
+			display(numberArr);	
+		}
+
+
+	
+	</script>
+</head>
+<body>
+
+<p>Enter array elements : <input type="input" id="arrayElements"></p>
+<button onclick="arrayOperation()">ADD</button>
+<button onclick="display()">DISPLAY ORIGINAL</button>
+<button onclick="asc()">ASCENDING</button>
+<button onclick="desc()">DESCENDING</button>
+<p id="result"></p>
+
+
+</body>
+</html>

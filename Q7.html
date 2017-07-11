@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Q7</title>
+	<script type="text/javascript">
+		function factorial(){
+			var num=document.getElementById("Number").value;
+			var result=num;
+			for (var i = num-1; i >= 2; i--) {
+				result=result*i;
+			}
+
+			document.getElementById("result").innerHTML=result;
+		}
+	</script>
+</head>
+<body>
+<p>Enter Number : <input type="input" id="Number"></p>
+<button onclick="factorial()">Factorial</button>
+<p id="result"></p>
+</body>
+</html>

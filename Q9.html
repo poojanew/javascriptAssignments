@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment Q9</title>
+	<script type="text/javascript">
+
+				var numberArray=[];
+
+		function arrayOperation(){
+
+				numberArray.push(document.getElementById("arrayElements").value);
+				document.getElementById("result").innerHTML="";
+
+				
+		}
+
+		function display()
+		{
+			for (var i = 0; i <=numberArray.length-1; i++) {
+					document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+" "+numberArray[i];			
+			}
+		}
+
+		function max(){
+
+			numberArray.sort();
+			document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"Max Element : "+numberArray[numberArray.length-1];			
+
+
+
+		}
+
+		function min(){
+			document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"MIN Element : "+numberArray[0];			
+
+		}
+
+		function total(){
+			var total;
+			for (var j = 0; j <=numberArray.length-1; j++) {
+				total+=numberArray[j];
+
+			}
+
+		document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"TOTAL : "+total;		
+
+			return total;
+		}
+
+		function avg(){
+			var total1=total();
+			result=(total1/numberArray.length);
+			document.getElementById("result").innerHTML=document.getElementById("result").innerHTML+"TOTAL : "+result;		
+
+
+		}
+	</script>
+</head>
+<body>
+
+<p>Enter array elements : <input type="input" id="arrayElements"></p>
+<button onclick="arrayOperation()">ADD</button>
+<button onclick="display()">DISPLAY</button>
+<button onclick="max()">MAX</button>
+<button onclick="min()">MIN</button>
+<button onclick="total()">TOTAL</button>
+<button onclick="avg()">AVG</button>
+
+
+
+<p id="result"></p>
+
+
+</body>
+</html>
