@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment Q5</title>
+	<script type="text/javascript">
+	function checkVowel(){
+		var alphabet=document.getElementById("alphabet").value;
+		
+		if (alphabet=='A' || alphabet=='E' || alphabet=='I' || alphabet=='O' || alphabet=='U'|| alphabet=='a'|| alphabet=='e'|| alphabet=='i'|| alphabet=='o' || alphabet=='u') {				
+			document.getElementById("result").innerHTML="Alphabet is vowel";
+		}
+		else{
+			document.getElementById("result").innerHTML="Alphabet is not vowel";
+
+		}
+
+		document.getElementById("alphabet").value="";
+	}
+		
+	</script>
+	
+</head>
+<body>
+
+<p>Enter alphabet : <input type="input" id="alphabet"></p>
+
+<button onclick="checkVowel()">check</button>
+
+<p id="result"></p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment Q3</title>
+
+	<script type="text/javascript">
+		
+		function divide(){
+			var number1=document.getElementById("number1").value;
+			var number2=document.getElementById("number2").value;
+
+			if (number2!=0) {
+
+				var result=number1/number2;
+				document.getElementById("result").innerHTML=(number1/number2);
+				document.getElementById("number2").value="";
+				document.getElementById("number1").value="";
+
+			}
+
+			else{
+			window.alert("Number 2 cannot be '0'");
+			document.getElementById("number2").value="";
+				document.getElementById("number1").value="";
+
+			}
+		}
+
+		</script>
+</head>
+<body>
+
+<p>Enter Number 1 :<input type="input" id="number1"></p>
+<p>Enter Number 2 :<input type="input" id="number2"></p>
+
+<button onclick="divide()">Result</button>
+
+<p id="result"></p>
+
+
+
+</body>
+</html>

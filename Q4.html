@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Assignment Q4</title>
+	<script type="text/javascript">
+		function generateTable(){
+
+			var number=document.getElementById("number").value;
+			var table=document.getElementById("numberTable");
+			var row=table.insertRow(0);
+			var cell=row.insertCell(0);
+			cell.innerHTML="Table : "+number;
+			for (var i = 1; i <= 10; i++)
+			{
+				var row=table.insertRow(i);
+				var cell=row.insertCell(0);
+				cell.innerHTML=number*i;
+			}
+
+			setTimeout(function (){
+
+			if(confirm("Do you want to go for another number")){
+
+				location.reload();
+			}
+			else{
+
+			}
+
+		},1000);
+		}
+
+		function next(){
+
+			if(confirm("Do you want to go for another number")){
+
+				location.reload();
+			}
+			else{
+
+			}
+
+		}
+</script>
+</head>
+<body>
+
+<h1>Generate Table</h1>
+
+<p>Enter number<input type="input" id="number"></p>
+
+<button onclick="generateTable()">generate</button>
+
+<table id="numberTable" border="1"></table>
+
+</body>
+</html>

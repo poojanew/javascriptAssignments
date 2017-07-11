@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var BankAccount={
+	accName : "Pooja",
+	accBalance : 1000,
+	accNo : 5212,
+	withdraw : function(amt){
+		this.accBalance=this.accBalance-amt;
+		return  this.accBalance;	},
+
+	deposite : function(amt){
+		this.accBalance=this.accBalance+amt;
+		return  this.accBalance;
+	},
+
+	getAccBal : function(){
+		return  BankAccount.accBalance;
+	},
+
+	getAccNo : function(){
+		return BankAccount.accNo;
+	}
+};
+
+console.log(BankAccount.accName);
+console.log(BankAccount.accBalance);
+console.log(BankAccount.accNo);
+console.log(BankAccount.withdraw(200));
+console.log(BankAccount.deposite(500));
+console.log(BankAccount.getAccBal());
+console.log(BankAccount.getAccNo());
+
+
+</script>
+
+</body>
+</html>
